@@ -11,9 +11,9 @@
     /* Neon Red Palette */
     --neon-red: #ff2a4b;
     --neon-red-bright: #ff526d;
-    --neon-glow-sm: 0 0 10px rgba(255, 42, 75, 0.4), 0 0 20px rgba(255, 42, 75, 0.2);
-    --neon-glow-md: 0 0 15px rgba(255, 42, 75, 0.6), 0 0 30px rgba(255, 42, 75, 0.35);
-    --neon-glow-lg: 0 0 25px rgba(255, 42, 75, 0.8), 0 0 50px rgba(255, 42, 75, 0.4);
+    --neon-glow-sm: 0 0 0px rgba(255, 42, 75, 0.4), 0 0 20px rgba(255, 42, 75, 0.2);
+    --neon-glow-md: 0 0 0px rgba(255, 42, 75, 0.6), 0 0 30px rgba(255, 42, 75, 0.35);
+    --neon-glow-lg: 0 0 0px rgba(255, 42, 75, 0.8), 0 0 50px rgba(255, 42, 75, 0.4);
 
     --radius-sm: 8px;
     --radius-md: 16px;
@@ -51,7 +51,7 @@
     width: 300px;
     height: 300px;
     border-radius: var(--radius-full);
-    filter: blur(100px);
+    filter: blur(1px);
     z-index: 0;
     pointer-events: none;
     }
@@ -78,7 +78,7 @@
     }
 
     .neon-border-circle {
-    border: 2px solid var(--neon-red);
+    border: 1px solid var(--neon-red);
     box-shadow: var(--neon-glow-md);
     }
 
