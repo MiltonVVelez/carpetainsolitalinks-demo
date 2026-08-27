@@ -1,0 +1,88 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Carpeta Insolita | Links </title>
+    <meta name="description" content="Connect with Carpeta Insolita across all digital platforms and explore recent projects." />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+    <div class="glow-bg top-glow" aria-hidden="true"></div>
+    <div class="glow-bg bottom-glow" aria-hidden="true"></div>
+
+    <main class="container">
+        <header class="profile-header">
+        <div class="avatar-wrapper neon-border-circle">
+            <img 
+            src="images/white-logo.png" 
+            alt="Carpeta Insolita profile picture" 
+            class="avatar"
+            />
+        </div>
+        <h1 class="profile-name">Carpeta Insolita</h1>
+        <p class="profile-title">Revista Cultural Digital</p>
+        <p class="profile-bio">Explorando mis raíces a través de la creatividad y la música, conectando el arte digital con el mundo profesional</p>
+        </header>
+
+        <section class="social-links" aria-label="Social media profiles">
+        <a href="mailto:carpetainsolitat@gmail.com" class="social-icon neon-border" aria-label="Email Me">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        </section>
+
+        <section class="links-list" aria-label="Quick Links">
+        <a href="https://youtube.com/@carpetainsolita?si=k18E27cbzToyZ448" class="link-card neon-border" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon"><i class="fa-brands fa-youtube"></i></div>
+            <div class="card-content">
+            <span class="card-title">Canal de Youtube</span>
+            <span class="card-desc">Lo que lees, en movimiento</span>
+            </div>
+        </a>
+
+        <a href="https://open.spotify.com/user/31ppwrunruhr2meqkglfdl7c63s4?si=mAsUPwHKTp-913XzojfAvA" class="link-card neon-border highlight" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon"><i class="fa-brands fa-spotify"></i></div>
+            <div class="card-content">
+            <span class="card-title">Spotify</span>
+            <span class="card-desc">Sintoniza el ritmo de la cultura</span>
+            </div>
+        </a>
+
+        <a href="https://music.apple.com/profile/neythanflobrii" class="link-card neon-border" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon"><i class="fa-brands fa-itunes-note"></i></div>
+            <div class="card-content">
+            <span class="card-title">Apple Music</span>
+            <span class="card-desc">Sube el volumen de lo nuestro.</span>
+            </div>
+        </a>
+
+        <a href="https://open.substack.com/pub/carpetainsolita?utm_source=share&utm_medium=android&r=8q7kbs" class="link-card neon-border" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon"><i class="fa-regular fa-bookmark"></i></div>
+            <div class="card-content">
+            <span class="card-title">Substack</span>
+            <span class="card-desc">Más cultura: vamos a Substack.</span>
+            </div>
+        </a>
+        </section>
+
+        <div class="action-wrapper">
+        <button id="share-btn" class="action-btn neon-border" aria-label="Share this profile">
+            <i class="fa-solid fa-share-nodes"></i> Share Page
+        </button>
+        <span id="toast" class="toast neon-border">Link copied to clipboard!</span>
+        </div>
+
+        <footer class="footer">
+        <p>&copy; <span id="current-year"></span> Carpeta Insolita. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+    </body>
+    </html>

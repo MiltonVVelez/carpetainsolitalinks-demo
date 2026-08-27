@@ -1,0 +1,304 @@
+    /* ==========================================================================
+    CSS Variables & Mobile Setup
+    ========================================================================== */
+    :root {
+    --bg-primary: #050507;
+    --bg-card: rgba(18, 18, 22, 0.85);
+    --bg-card-active: rgba(35, 15, 18, 0.95);
+    --text-primary: #f8fafc;
+    --text-secondary: #a1a1aa;
+
+    /* Neon Red Palette */
+    --neon-red: #ff2a4b;
+    --neon-red-bright: #ff526d;
+    --neon-glow-sm: 0 0 10px rgba(255, 42, 75, 0.4), 0 0 20px rgba(255, 42, 75, 0.2);
+    --neon-glow-md: 0 0 15px rgba(255, 42, 75, 0.6), 0 0 30px rgba(255, 42, 75, 0.35);
+    --neon-glow-lg: 0 0 25px rgba(255, 42, 75, 0.8), 0 0 50px rgba(255, 42, 75, 0.4);
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-full: 9999px;
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent; 
+    }
+
+    body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    min-height: 100vh;
+    min-height: 100dvh; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: env(safe-area-inset-top, 1.5rem) 1.25rem env(safe-area-inset-bottom, 1.5rem);
+    position: relative;
+    overflow-x: hidden;
+    }
+
+    /* ==========================================================================
+    Ambient Background Neon
+    ========================================================================== */
+    .glow-bg {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: var(--radius-full);
+    filter: blur(100px);
+    z-index: 0;
+    pointer-events: none;
+    }
+
+    .top-glow {
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 42, 75, 0.25);
+    }
+
+    .bottom-glow {
+    bottom: -80px;
+    right: 10%;
+    background: rgba(180, 20, 45, 0.2);
+    }
+
+    /* ==========================================================================
+    Neon Border Utilities
+    ========================================================================== */
+    .neon-border {
+    border: 1.5px solid var(--neon-red);
+    box-shadow: var(--neon-glow-sm);
+    }
+
+    .neon-border-circle {
+    border: 2px solid var(--neon-red);
+    box-shadow: var(--neon-glow-md);
+    }
+
+    /* ==========================================================================
+    Container Layout
+    ========================================================================== */
+    .container {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: auto 0;
+    }
+
+    /* ==========================================================================
+    Profile Header
+    ========================================================================== */
+    .profile-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .avatar-wrapper {
+    position: relative;
+    margin-bottom: 0.9rem;
+    border-radius: var(--radius-full);
+    padding: 3px;
+    display: inline-flex;
+    }
+
+    .avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    display: block;
+    }
+
+    .profile-name {
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    }
+
+    .profile-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--neon-red-bright);
+    text-shadow: 0 0 12px rgba(255, 42, 75, 0.6);
+    margin-top: 0.2rem;
+    }
+
+    .profile-bio {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    max-width: 320px;
+    margin-top: 0.4rem;
+    }
+
+    /* ==========================================================================
+    Social Icon Row (Touch optimized: 48px target)
+    ========================================================================== */
+    .social-links {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    transition: var(--transition);
+    }
+
+    .social-icon:active,
+    .social-icon:hover {
+    box-shadow: var(--neon-glow-md);
+    transform: scale(1.08);
+    }
+
+    /* ==========================================================================
+    Link Cards (Touch friendly: 56px+ height)
+    ========================================================================== */
+    .links-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    }
+
+    .link-card {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding: 0.9rem 1.25rem;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    backdrop-filter: blur(14px);
+    transition: var(--transition);
+    }
+
+    .link-card:active,
+    .link-card:hover {
+    background: var(--bg-card-active);
+    box-shadow: var(--neon-glow-md);
+    transform: translateY(-2px);
+    }
+
+    .link-card.highlight {
+    background: rgba(255, 42, 75, 0.12);
+    box-shadow: var(--neon-glow-md);
+    }
+
+    .card-icon {
+    font-size: 1.25rem;
+    color: var(--neon-red-bright);
+    margin-right: 1.1rem;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 0 10px rgba(255, 42, 75, 0.5);
+    }
+
+    .card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .card-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    }
+
+    .card-desc {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    }
+
+    .external-icon {
+    font-size: 0.8rem;
+    color: var(--neon-red);
+    opacity: 0.8;
+    }
+
+    /* ==========================================================================
+    Share Action Button & Toast
+    ========================================================================== */
+    .action-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .action-btn {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    min-height: 44px;
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    }
+
+    .action-btn:active,
+    .action-btn:hover {
+    box-shadow: var(--neon-glow-md);
+    transform: scale(1.03);
+    }
+
+    .toast {
+    position: absolute;
+    top: -42px;
+    background: #111116;
+    color: var(--neon-red-bright);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: var(--radius-sm);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+    }
+
+    .toast.show {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    /* ==========================================================================
+    Footer
+    ========================================================================== */
+    .footer {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 0.25rem;
+    }
