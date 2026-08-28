@@ -9,11 +9,11 @@
     --text-secondary: #a1a1aa;
 
     /* Neon Red Palette */
-    --neon-red: #ff2a4b;
-    --neon-red-bright: #ff526d;
-    --neon-glow-sm: 0 0 0px rgba(255, 42, 75, 0.4), 0 0 20px rgba(255, 42, 75, 0.2);
-    --neon-glow-md: 0 0 0px rgba(255, 42, 75, 0.6), 0 0 30px rgba(255, 42, 75, 0.35);
-    --neon-glow-lg: 0 0 0px rgba(255, 42, 75, 0.8), 0 0 50px rgba(255, 42, 75, 0.4);
+    --neon-red: #020202;
+    --neon-red-bright: #ffffff;
+    --neon-glow-sm: 0 0 0px rgba(255, 255, 255, 0.4), 0 0 20px rgba(236, 230, 231, 0.2);
+    --neon-glow-md: 0 0 0px rgba(239, 231, 232, 0.6), 0 0 30px rgba(216, 200, 203, 0.35);
+    --neon-glow-lg: 0 0 0px rgba(245, 236, 238, 0.8), 0 0 50px rgba(230, 210, 213, 0.4);
 
     --radius-sm: 8px;
     --radius-md: 16px;
@@ -61,7 +61,7 @@
     top: -80px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(255, 42, 75, 0.25);
+    background: rgba(246, 242, 243, 0.25);
     }
 
     .bottom-glow {
@@ -219,7 +219,7 @@
     margin-right: 1.1rem;
     display: flex;
     align-items: center;
-    text-shadow: 0 0 10px rgba(255, 42, 75, 0.5);
+    text-shadow: 0 0 10px rgba(255, 252, 253, 0.5);
     }
 
     .card-content {
